@@ -31,13 +31,12 @@ async fn main() -> Result<(), Box<dyn Error>>{
     let listener = TcpListener::bind("127.0.0.1:8082").await?;
 
     //Display server startup Message with formatting
-    println!(r#"
- ____  _____ ____  _____  ___  ____    _
-|  _ \| ____/ ___||_   _||_ _||  _ \  / \
-| |_) |  _| \___ \  | |   | | | | | |/ _ \
-|  _ <| |___ ___) | | |   | | | |_| / ___ \
-|_| \_\_____|____/  |_|  |___||____/_/   \_\
-"#);
+    println!("╔════════════════════════════════════════╗");
+    println!("║        RETRO CHAT SERVER ACTIVE        ║");
+    println!("║        Port: 8082  Host: 127.0.0.1     ║");
+    println!("║        Press Ctrl+C to shutdown        ║");
+    println!("╚════════════════════════════════════════╝");
+
     println!("Server listening on 127.0.0.1:8082");
 
     //Create a broadcast channel for message distribution
