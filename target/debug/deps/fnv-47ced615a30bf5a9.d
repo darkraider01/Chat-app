@@ -1,7 +1,0 @@
-/home/ishan/projects/Projects/Rust/Retro Chat App/retro-chat/target/debug/deps/fnv-47ced615a30bf5a9.d: /home/ishan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fnv-1.0.7/lib.rs
-
-/home/ishan/projects/Projects/Rust/Retro Chat App/retro-chat/target/debug/deps/libfnv-47ced615a30bf5a9.rlib: /home/ishan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fnv-1.0.7/lib.rs
-
-/home/ishan/projects/Projects/Rust/Retro Chat App/retro-chat/target/debug/deps/libfnv-47ced615a30bf5a9.rmeta: /home/ishan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fnv-1.0.7/lib.rs
-
-/home/ishan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fnv-1.0.7/lib.rs:
