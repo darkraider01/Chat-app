@@ -1,5 +1,5 @@
 use tokio:: {
-    net::{TcpListener, TcpStream, ToSocketAddrs},
+    net::{TcpListener, TcpStream},
     sync::broadcast::{self, Sender, Receiver},
     io::{AsyncBufReadExt, AsyncWriteExt, BufReader},
 };
@@ -60,6 +60,7 @@ async fn main() -> Result<(), Box<dyn Error>>{
             handle_connection(socket, tx, rx).await;
         });
     }
+}
     //Function to handle the client connection
     async fn handle_connection(
     mut socket: TcpStream,
@@ -108,6 +109,13 @@ async fn main() -> Result<(), Box<dyn Error>>{
             
         }
     }
-}
+    //Send a system notification indicating the user has left the chat
+    let leave_msg: ChatMessage = ChatMessage { username: username.clone(), content:"left the chat".to_string(), timestamp: Local::now().format("%H:5M:%S").to_string(), message_type: MessageType::SystemNotification };
+    let leave_json: String = serde_json::to_string(&leave_msg).unwrap();
+    tx.send(leave_json).unwrap();
+
+    //log disconnection info to the terminal 
+    println!("[{}] {} disconnected", Local::now().format("%H:M:%S"), username);
+
 
 }
